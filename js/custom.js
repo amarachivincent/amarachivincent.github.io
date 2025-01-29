@@ -118,6 +118,8 @@ window.addEventListener("load", () => {
   typeWriter();
 });
 
+
+/*
 document.addEventListener("DOMContentLoaded", function() {
   AOS.init({
       easing: 'ease-out',
@@ -127,6 +129,8 @@ document.addEventListener("DOMContentLoaded", function() {
       disable: ''
   });
 });
+
+*/
   // Close the navbar when a nav link is clicked in mobile view
   document.querySelectorAll('.navbar-nav .nav-link').forEach(item => {
     item.addEventListener('click', () => {
