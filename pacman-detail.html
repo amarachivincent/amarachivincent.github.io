@@ -18,6 +18,7 @@
       background-color: #fff;
       color: #333;
       margin-top: 80px;
+    
     }
 
     /* Fixed Navbar */
@@ -34,13 +35,19 @@
       font-size: 1.1rem;
     }
 
-    .container {
+    .container{
       max-width: 1200px;
     }
 
+    .container .row{
+      display:flex;
+      flex-direction:row-reverse;
+    }
+
     .project-header {
-      text-align: center;
+      text-align: left;
       margin-top: 10px;
+
     }
 
     .carousel-item img {
@@ -106,6 +113,9 @@
       padding-left: 15px;
       padding-right: 15px;
     }
+    .lead{
+      font-size:unset;
+    }
   </style>
 </head>
 <body>
@@ -119,14 +129,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#resume">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-          <!--<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>-->
+          <li class="nav-item"><a class="nav-link" href="index.php#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.php?blog">Blog</a></li>
         </ul>
       </div>
     </div>
@@ -135,16 +145,20 @@
   <!-- Breadcrumb -->
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="index.html#home">Home</a></li>
-      <li class="breadcrumb-item"><a href="index.html#portfolio">Portfolio</a></li>
+      <li class="breadcrumb-item"><a href="index.php#home">Home</a></li>
+      <li class="breadcrumb-item"><a href="index.php#portfolio">Portfolio</a></li>
       <li class="breadcrumb-item active" aria-current="page">Coin and Wall Game</li>
     </ol>
   </nav>
 
   <!-- Project Header -->
   <section class="project-header">
+    <div class='container'>
+      <div class="row">
     <h1>Coin and Wall Grid Game</h1>
     <p class="lead">A fun, interactive game where you move a player around a grid, collecting coins while avoiding walls. The goal is to collect as many coins as possible without hitting the walls!</p>
+  </div>
+  </div>
   </section>
 
   <!-- Project Content - Two Columns -->
@@ -183,7 +197,7 @@
         </ul>
 
         <div>
-          <a href="pacman.html" target="_blank" class="btn btn-primary">Play Live Game</a>
+          <a href="pacman.php" target="_blank" class="btn btn-primary">Play Live Game</a>
         </div>
       </div>
     </div>
@@ -226,7 +240,7 @@
     <i class="fa fa-arrow-up"></i>
   </button>
 
-  <script src="js/jquery.min.js"></script>
+
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="aos/aos.js"></script>
   <script src="js/custom.js"></script>
