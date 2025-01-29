@@ -1,5 +1,15 @@
  /* General Styles */
-    body {
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  width: 100%; /* Ensure full-width without overflow */
+  margin: 0; /* Ensure no margin is causing overflow */
+  padding: 0; /* Remove padding that could cause overflow */
+  box-sizing: border-box; /* Prevent padding from causing overflow */
+}
+
+ 
+ body {
       background-color: #fff;
       color:#000;
       padding-top: 40px;
@@ -7,6 +17,11 @@
       line-height:1.5rem;
       font-family: 'Arial', sans-serif;
     }
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Ensure all elements use border-box model */
+}
 
 
 /* General Styles */
@@ -563,9 +578,11 @@ form .btn {
   font-size: 18px;
 }
 
-
 .nav-item.active .nav-link {
       color: #007bff;
+      color:white;
+      background:#007bff;
+
     
     }
 
@@ -601,20 +618,6 @@ form .btn {
       }
     }
 
-/* Prevent horizontal scrolling */
-html, body {
-  overflow-x: hidden; /* Disable horizontal scrolling */
-  width: 100%; /* Ensure full-width without overflow */
-  margin: 0; /* Ensure no margin is causing overflow */
-  padding: 0; /* Remove padding that could cause overflow */
-  box-sizing: border-box; /* Prevent padding from causing overflow */
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit; /* Ensure all elements use border-box model */
-}
 
 @media (max-width: 768px) {
   /* Adjust the hero section for smaller screens */
@@ -631,7 +634,7 @@ html, body {
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .hero > div {
@@ -665,6 +668,57 @@ html, body {
   .nav-item.active .nav-link {
     width: 10%;
   }
+
+    /* Adjust the columns in the resume section */
+    #resume .row {
+      flex-direction: column; /* Stack the columns vertically */
+    }
+  
+    #resume .column {
+      width: 100%; /* Ensure the columns take full width */
+      margin-bottom: 20px; /* Add some space between sections */
+    }
+  
+    /* Resume item styles */
+    .resume-item .resume-item-inner {
+      padding-left: 10px; /* Adjust the left padding */
+      border-left: 4px solid #007bff; /* Thinner left border */
+      margin-left: 10px; /* Adjust the margin */
+    }
+  
+    /* Make sure the section title is centered and has proper spacing */
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px; /* Add some space below the title */
+    }
+  
+    /* Adjust other font sizes and spacing as necessary */
+    .resume-item h5 {
+      font-size: 1.2rem; /* Smaller font size for titles */
+    }
+  
+    .resume-item .details {
+      font-size: 0.9rem; /* Slightly smaller font size for details */
+    }
+  
+    /* Additional adjustments for other sections */
+    .hero h1 {
+      font-size: 1.8rem;
+      margin-top: 10vh;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    footer p {
+      font-size: 0.8rem;
+    }
+  
+    .contact-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 }
 
 @media (max-width: 480px) {
@@ -678,7 +732,7 @@ html, body {
   }
 
   .hero p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .hero > div {
@@ -697,4 +751,34 @@ html, body {
   .nav-item.active .nav-link {
     width: 20%;
   }
+
+    /* Further adjustments for very small screens */
+    #resume .row {
+      flex-direction: column; /* Stack the resume sections vertically */
+    }
+  
+    #resume .column {
+      width: 100%; /* Full width for smaller screens */
+      margin-bottom: 15px;
+    }
+  
+    .section-title {
+      font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+  
+    .resume-item h5 {
+      font-size: 1rem; /* Smaller font size for titles */
+    }
+  
+    .resume-item .details {
+      font-size: 0.8rem; /* Smaller font size for details */
+    }
+  
+    .portfolio-container {
+      grid-template-columns: 1fr; /* Single column layout */
+    }
+  
+    footer p {
+      font-size: 0.7rem;
+    }
 }
