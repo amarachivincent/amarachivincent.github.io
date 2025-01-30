@@ -12,8 +12,12 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
   <link href="fonts/css/font-awesome.css" rel="stylesheet">
-  <!--<link href="aos/aos.css" rel='Stylesheet' />-->
-  <!--<link href="aos/imagehover.min.css" rel='Stylesheet' />-->
+
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
 
@@ -343,9 +347,9 @@
         <div class="portfolio-item">
           <img src="images/tictac.jpg" width="100%" height="auto" alt="Portfolio Image 1" data-bs-toggle="modal" data-bs-target="#zoomModal1">
           <div class="portfolio-details">
-            <h3>Tic Tac Game</h3>
+            <h3>project 1</h3>
             <a href="#" class="portfolio-zoom" data-bs-toggle="modal" data-bs-target="#zoomModal1"><i class="fa fa-search-plus"></i></a>
-            <a href="tictac-detail.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+           <!-- <a href="tictac-detail.html" class="portfolio-link"><i class="fa fa-link"></i></a>-->
           </div>
         </div>
   
@@ -353,9 +357,9 @@
         <div class="portfolio-item">
           <img src="images/p.jpg" alt="Portfolio Image 2" data-bs-toggle="modal" data-bs-target="#zoomModal2">
           <div class="portfolio-details">
-            <h3>Portfolio website</h3>
+            <h3>Project 3</h3>
             <a href="#" class="portfolio-zoom" data-bs-toggle="modal" data-bs-target="#zoomModal2"><i class="fa fa-search-plus"></i></a>
-            <a href="website-detail.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+            <!--<a href="website-detail.html" class="portfolio-link"><i class="fa fa-link"></i></a>-->
           </div>
         </div>
   
@@ -363,9 +367,9 @@
         <div class="portfolio-item">
           <img src="images/c.jpg" alt="Portfolio Image 3" data-bs-toggle="modal" data-bs-target="#zoomModal3">
           <div class="portfolio-details">
-            <h3>Coin</h3>
+            <h3>project 3</h3>
             <a href="#" class="portfolio-zoom" data-bs-toggle="modal" data-bs-target="#zoomModal3"><i class="fa fa-search-plus"></i></a>
-            <a href="pacman-detail.html" class="portfolio-link"><i class="fa fa-link"></i></a>
+            <!--<a href="pacman-detail.html" class="portfolio-link"><i class="fa fa-link"></i></a>-->
           </div>
         </div>
   
@@ -484,36 +488,39 @@
     </div>
   </section>
 
-  <!-- Testimonial Section -->
   <section class="testimonial-section">
-    <div class="container"  data-aos="slide-up">
+    <div class="container" data-aos="slide-up">
       <div class="testimonial-heading">
         <h2 class="section-title">What Our Clients Say</h2>
       </div>
 
-      <div class="testimonial-carousel">
-        <!-- Testimonial Item 1 -->
-        <div class="testimonial-item active">
-          <p class="testimonial-quote">" Business review service has changed the way we operate our business. The results are incredible! "</p>
-          <p class="testimonial-author">Uju Ogonna, <span class="designation">CEO</span></p>
+      <!-- Swiper Wrapper -->
+      <div class="testimonial-carousel swiper-container">
+        <div class="swiper-wrapper">
+
+          <!-- Testimonial Item 1 -->
+          <div class="testimonial-item swiper-slide active">
+            <p class="testimonial-quote">"Business review service has changed the way we operate our business. The results are incredible!"</p>
+            <p class="testimonial-author">Uju Ogonna, <span class="designation">CEO</span></p>
+          </div>
+
+          <!-- Testimonial Item 4 -->
+          <div class="testimonial-item swiper-slide">
+            <p class="testimonial-quote">"Vincent delivered a stunning, user-friendly website that perfectly captures our brand."</p>
+            <p class="testimonial-author">Emelie Praise, <span class="designation">Marketing Director</span></p>
+          </div>
+
         </div>
 
 
-        <!-- Testimonial Item 4 -->
-        <div class="testimonial-item">
-          <p class="testimonial-quote">Vincent delivered a stunning, user-friendly website that perfectly captures our brand. The process was smooth, and the results have greatly enhanced our online presence!"</p>
-          <p class="testimonial-author">Emelie Praise, <span class="designation">Marketing Director </span></p>
-        </div>
-        
-        <!-- Radio Button Navigation -->
-        <div class="testimonial-radio-nav">
-          <input type="radio" name="testimonial" id="testimonial1" checked>
-          <input type="radio" name="testimonial" id="testimonial2">
 
-        </div>
+        <!-- Swiper Pagination (optional) -->
+        <div class="swiper-pagination"></div>
       </div>
     </div>
-  </section>
+</section>
+
+
   <!-- Contact Section -->
   <section class="contact-section" id="contact">
     <div class="container"  data-aos="slide-up">
@@ -601,6 +608,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <!--<script src="aos/aos.js"></script>-->
   <script src="js/custom.js"></script>
+  <script src="js/swiper.bundle.min.js"></script>
   <script>
     
   document.addEventListener('DOMContentLoaded', () => {

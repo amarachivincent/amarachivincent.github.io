@@ -50,30 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// Testimonial Carousel (Radio Button Navigation)
-const testimonialItems = document.querySelectorAll(".testimonial-item");
-const radioButtons = document.querySelectorAll(".testimonial-radio-nav input[type='radio']");
-
-// Function to handle the active testimonial
-function showTestimonial(index) {
-  testimonialItems.forEach(item => item.classList.remove("active"));
-  radioButtons.forEach(button => button.checked = false);
-  testimonialItems[index].classList.add("active");
-  radioButtons[index].checked = true;
-}
-
-// Set up an event listener for each radio button
-radioButtons.forEach((radioButton, index) => {
-  radioButton.addEventListener("click", () => showTestimonial(index));
-});
-
-// Automatically move to the next testimonial every 5 seconds
-let currentTestimonialIndex = 0;
-setInterval(() => {
-  currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonialItems.length;
-  showTestimonial(currentTestimonialIndex);
-}, 5000);
-
 // Typewriter Animation for Multiple Words with Forward and Backward Animation
 const typewriterText = document.getElementById('typewriter-text');
 const words = ["Web Developer", "Frontend Developer", "Backend Developer"];
@@ -142,5 +118,39 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+  //swiper
+  const swiper = new Swiper('.testimonial-carousel', {
+    // Swiper Options
+    loop: true, // Optional, enables infinite loop
+    slidesPerView: 1, // 1 slide visible by default
+    spaceBetween: 20, // Space between slides
+  
+    // Responsive breakpoints
+    breakpoints: {
+      768: {
+        slidesPerView: 1, // 2 slides visible at 768px width
+        spaceBetween: 30, // More space between slides on larger screens
+      },
+      468: {
+        slidesPerView: 1, // 1 slide visible at 468px width
+        spaceBetween: 20,
+      }
+    },
+  
+    // Pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  
+    // Optional autoplay settings
+    autoplay: {
+      delay: 5000, // Auto slide every 5 seconds
+      disableOnInteraction: false,
+    },
+  });
+  
+
+  
 
 

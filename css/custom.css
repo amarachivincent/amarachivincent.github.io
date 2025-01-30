@@ -45,7 +45,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(250, 250, 250, 0.6); /* Darker overlay for better contrast */
+  background-color: rgba(250, 250, 250, 0.5); /* Darker overlay for better contrast */
   z-index: 1;
 }
     .hero > div {
@@ -483,9 +483,11 @@ form .btn {
 
  /* Testimonial Carousel Container */
 .testimonial-carousel {
-  max-width: 800px;
   margin: 0 auto;
   position: relative;
+  width: 100%;                   
+  overflow: hidden;  
+
 }
 
 /* Testimonial Item */
@@ -526,33 +528,7 @@ form .btn {
   color: #aaa;
 
 }
-    /* Radio Buttons for Navigation */
-    .testimonial-radio-nav {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .testimonial-radio-nav input[type="radio"] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: #ddd;
-      margin: 0 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .testimonial-radio-nav input[type="radio"]:checked {
-      background-color: #007bff;
-    }
-
-    /* Testimonial Radio Navigation Container */
-    .testimonial-radio-nav input[type="radio"]:focus {
-      outline: none;
-    }
+   
 
 /* Back to Top Button */
 #backToTopBtn {
@@ -719,6 +695,12 @@ form .btn {
       flex-direction: column;
       align-items: flex-start;
     }
+    .testimonial-quote {
+      font-size: 1rem;
+  }
+  .testimonial-author {
+      font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -781,4 +763,10 @@ form .btn {
     footer p {
       font-size: 0.7rem;
     }
+    .testimonial-quote {
+      font-size: 0.9rem;
+  }
+  .testimonial-author {
+      font-size: 0.8rem;
+  }
 }
