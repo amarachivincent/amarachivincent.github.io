@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <style>
+        body {
+            background-color: #ffffff; /* White background */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .output {
+            margin-bottom: 20px; /* Space between move info and game */
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .move {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .replay {
+            display: none;
+            margin-top: 30px; /* Added margin-top to position below the game */
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            background-color: white; /* White background for restart button */
+            color: black;
+            border: 2px solid black; /* Black border around the button */
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .replay:hover {
+            background-color: #f5f5f5; /* Hover effect */
+        }
+
+        .winner {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        #frame {
+            display: grid;
+            grid-template-columns: repeat(3, 120px); /* Enlarged button size */
+            grid-template-rows: repeat(3, 120px); /* Enlarged button size */
+            gap: 10px; /* Increased gap between buttons */
+            background-color: #fff; /* Gray background for the game board */
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* Shadow for the game board */
+        }
+
+        button {
+            width: 120px;  /* Increased button size */
+            height: 120px; /* Increased button size */
+            font-size: 3rem; /* Increased font size for X and O */
+            cursor: pointer;
+            background-color: #e3e3e3; /* Gray background for the buttons */
+            border: 2px solid #777; /* Black border around buttons */
+        }
+
+        button.x {
+            color: blue; /* Color for player X */
+        }
+
+        button.o {
+            color: green; /* Color for player O */
+        }
+
+        @media (max-width: 768px) {
+            #frame {
+                grid-template-columns: repeat(3, 100px);
+                grid-template-rows: repeat(3, 100px);
+                gap: 5px;
+            }
+
+            button {
+                width: 100px;
+                height: 100px;
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .move {
+                font-size: 1.2rem;
+            }
+
+            .replay {
+                padding: 8px 16px;
+                font-size: 1rem;
+            }
+
+            .winner {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #frame {
+                grid-template-columns: repeat(3, 80px);
+                grid-template-rows: repeat(3, 80px);
+                gap: 3px;
+            }
+
+            button {
+                width: 80px;
+                height: 80px;
+                font-size: 1.5rem;
+            }
+
+            .title {
+                font-size: 1.8rem;
+            }
+
+            .move {
+                font-size: 1rem;
+            }
+
+            .replay {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+
+            .winner {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="output">
+            <div class="title"><span>Tic Tac Toe Game</span></div>
+            <div class="winner">Move <span class="move">X</span></div>
+        </div>
+        <div id="frame"></div>
+        <div><a href="#" class="replay">Restart</a></div>
+    </div>
+
+    <script>
+        class Board {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.grid = Array.from({ length: y }, () => Array(x).fill('empty'));
+            }
+
+            init() {
+                const frame = document.querySelector('#frame');
+                frame.innerHTML = ''; // Clear any existing content
+
+                for (let y = 0; y < this.y; y++) {
+                    for (let x = 0; x < this.x; x++) {
+                        const btn = document.createElement('button');
+                        btn.dataset.y = y;
+                        btn.dataset.x = x;
+                        btn.addEventListener('click', (event) => this.handleClick(event));
+                        frame.appendChild(btn);
+                    }
+                }
+            }
+
+            handleClick(event) {
+                const { y, x } = event.target.dataset;
+                if (this.grid[y][x] === 'empty' && !this.checkWinner()) {
+                    const player = togglePlayer();
+                    this.grid[y][x] = player;
+                    event.target.textContent = player.toUpperCase();
+                    event.target.disabled = true;
+
+                    // Apply color to button based on player
+                    event.target.classList.add(player);
+
+                    const winner = this.checkWinner();
+                    if (winner) {
+                        document.querySelector('.winner').textContent = `${winner.toUpperCase()} wins!`;
+                        document.querySelector('.replay').style.display = 'inline';
+                    } else {
+                        document.querySelector('.move').textContent = player === 'x' ? 'O' : 'X';
+                    }
+                }
+            }
+
+            checkWinner() {
+                // Check rows, columns, and diagonals for winner
+                const lines = [
+                    // Rows
+                    [[0, 0], [0, 1], [0, 2]],
+                    [[1, 0], [1, 1], [1, 2]],
+                    [[2, 0], [2, 1], [2, 2]],
+                    // Columns
+                    [[0, 0], [1, 0], [2, 0]],
+                    [[0, 1], [1, 1], [2, 1]],
+                    [[0, 2], [1, 2], [2, 2]],
+                    // Diagonals
+                    [[0, 0], [1, 1], [2, 2]],
+                    [[0, 2], [1, 1], [2, 0]]
+                ];
+
+                for (const line of lines) {
+                    const [a, b, c] = line;
+                    const [ax, ay] = a;
+                    const [bx, by] = b;
+                    const [cx, cy] = c;
+                    if (this.grid[ay][ax] !== 'empty' && this.grid[ay][ax] === this.grid[by][bx] && this.grid[ay][ax] === this.grid[cy][cx]) {
+                        return this.grid[ay][ax];
+                    }
+                }
+
+                // Check for a tie (no empty cells left)
+                if (this.grid.flat().every(cell => cell !== 'empty')) {
+                    return 'No winner';
+                }
+
+                return null;
+            }
+        }
+
+        let playerOne = true;
+        function togglePlayer() {
+            playerOne = !playerOne;
+            return playerOne ? 'x' : 'o';
+        }
+
+        function restartGame(event) {
+            event.preventDefault(); // Prevent the link from loading a page
+            board = new Board(3, 3);
+            board.init();
+            document.querySelector('.winner').textContent = 'Move X';
+            document.querySelector('.move').textContent = 'X';
+            document.querySelector('.replay').style.display = 'none';
+        }
+
+        let board = new Board(3, 3);
+        board.init();
+        document.querySelector('.replay').addEventListener('click', restartGame);
+    </script>
+</body>
+</html>

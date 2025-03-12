@@ -45,7 +45,7 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(250, 250, 250, 0.5); /* Darker overlay for better contrast */
+  background-color: rgba(250, 250, 250, 0.6); /* Darker overlay for better contrast */
   z-index: 1;
 }
     .hero > div {

@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Developer Portfolio</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/home.css" rel="stylesheet">
+  <link href="fonts/css/font-awesome.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" >
+    <div class="container">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex justify-content-top align-items-left text-left text-black"  id="home">
+    <div>
+      <h1>IFEDUBA AMARACHI</h1>
+      <p>I'm a <span id="typewriter-text"></span></p>
+        <p class="social-links">
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/your-profile" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="https://twitter.com/your-profile" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/your-profile" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </p>
+
+    </div>
+
+  </section>
+
+<!-- About Section -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <p class="text-center">I'm a web developer with a passion for creating dynamic, user-friendly websites and applications. With years of experience in front-end and back-end technologies, I strive to deliver high-quality solutions.</p>
+
+    <div class="row">
+      <!-- Left Column: Picture -->
+      <div class="col-md-4">
+        <img src="images/about.jpg" alt="Your Photo" class="img-fluid" style="max-width: 100%; height: auto;">
+      </div>
+
+      <!-- Right Column: Introduction Text and Biodata -->
+      <div class="col-md-8">
+        <div class="row">
+          <!-- First Column of Biodata (Name, Age) -->
+          <div class="col-md-6">
+            <!-- Biodata Entry 1 -->
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong><i class="fa fa-user-circle"></i> Full Name:</strong>
+              <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#nameCollapse" aria-expanded="true" aria-controls="nameCollapse">
+                <i class="fa fa-chevron-down"></i>
+              </button>
+            </li>
+            <div id="nameCollapse" class="collapse show">
+              <p>IFEDUBA AMARACHI</p>
+            </div>
+
+            <!-- Biodata Entry 2 -->
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong><i class="fa fa-calendar"></i> Age:</strong>
+              <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#ageCollapse" aria-expanded="true" aria-controls="ageCollapse">
+                <i class="fa fa-chevron-down"></i>
+              </button>
+            </li>
+            <div id="ageCollapse" class="collapse show">
+              <p>25 years old</p>
+            </div>
+          </div>
+
+          <!-- Second Column of Biodata (Location, Occupation, Skills) -->
+          <div class="col-md-6">
+            <!-- Biodata Entry 3 -->
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong><i class="fa fa-map-marker"></i> Location:</strong>
+              <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#locationCollapse" aria-expanded="true" aria-controls="locationCollapse">
+                <i class="fa fa-chevron-down"></i>
+              </button>
+            </li>
+            <div id="locationCollapse" class="collapse show">
+              <p>Abuja, Nigeria</p>
+            </div>
+
+            <!-- Biodata Entry 4 -->
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong><i class="fa fa-briefcase"></i> Occupation:</strong>
+              <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#occupationCollapse" aria-expanded="true" aria-controls="occupationCollapse">
+                <i class="fa fa-chevron-down"></i>
+              </button>
+            </li>
+            <div id="occupationCollapse" class="collapse show">
+              <p>Full Stack Web Developer</p>
+            </div>
+
+            <!-- Biodata Entry 5 -->
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <strong><i class="fa fa-code"></i> Skills:</strong>
+              <button class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#skillsCollapse" aria-expanded="true" aria-controls="skillsCollapse">
+                <i class="fa fa-chevron-down"></i>
+              </button>
+            </li>
+            <div id="skillsCollapse" class="collapse show">
+              <p>HTML, CSS, JavaScript, React, Node.js, MongoDB, MySQL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section bg-white">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <p class="text-center">I'm a web developer with a passion for creating dynamic, user-friendly websites and applications. With years of experience in front-end and back-end technologies, I strive to deliver high-quality solutions.</p>
+
+      <div class="row">
+        <!-- First Column of Skills -->
+        <div class="col-md-6">
+          <div class="mb-4">
+            <div class="progress-wrapper">
+              <h5> HTML</h5>
+              <span class="progress-text">90%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          
+          <div class="mb-4">
+            <div class="progress-wrapper">
+              <h5> CSS</h5>
+              <span class="progress-text">85%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="progress-wrapper">
+              <h5></i> JAVASCRIPT</h5>
+              <span class="progress-text">80%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          
+          <div class="mb-4">
+            <div class="progress-wrapper">
+              <h5></i> REACT</h5>
+              <span class="progress-text">75%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Column of Skills -->
+        <div class="col-md-6">
+          <div class="mb-4">
+            <div class="progress-wrapper">
+              <h5> PHP</h5>
+              <span class="progress-text">70%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="progress-wrapper">
+              <h5> SQL</h5>
+              <span class="progress-text">65%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="progress-wrapper">
+              <h5> MySQL</h5>
+              <span class="progress-text">60%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="progress-wrapper">
+              <h5> Git</h5>
+              <span class="progress-text">85%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="section">
+    <div class="container">
+      <h2 class="section-title">Resume</h2>
+      <p class="details text-center">A passionate web developer with expertise in building responsive and interactive websites. Skilled in front-end and back-end technologies, with a strong foundation in JavaScript, React, Node.js, and databases like MongoDB and MySQL.</p>
+
+      <div class="row">
+        <!-- Left Column: Summary and Education -->
+        <div class="column">
+          <div class="resume-item">
+            <h5>Summary</h5>
+         
+            <div class="degree">IFEDUBA AMARACHI</div>
+            <div class="resume-item-inner">
+            <p class="details">A passionate web developer with expertise in building responsive and interactive websites. Skilled in front-end and back-end technologies, with a strong foundation in JavaScript, React, Node.js, and databases like MongoDB and MySQL.</p>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <h5>Education</h5>
+            <div class="degree">MASTERS DEGREE IN AGRICULTURAL TECHNOLOGY</div>
+              <div class="resume-item-inner">
+            <p class="year">2018 - 2022</p>
+            <p class="institution"><i>University of Abuja</i></p>
+            <p class="details">Focused on web development, programming languages, and software engineering practices. Gained hands-on experience with projects involving full-stack development using React, Node.js, and databases.</p>
+              </div>
+          </div>
+          <div class="resume-item">
+            <div class="degree">BACHELORS DEGREE IN AGRICULTURALTECHNOLOGY</div>
+            <div class="resume-item-inner">
+            <p class="year">2018 - 2022</p>
+            <p class="institution"><i>University of Abuja</i></p>
+            <p class="details">Focused on web development, programming languages, and software engineering practices. Gained hands-on experience with projects involving full-stack development using React, Node.js, and databases.</p>
+          </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Experience -->
+        <div class="column">
+          <div class="resume-item">
+            <h5>Experience</h5>
+            <div class="job-position">FULL STACK DEVELOPER</div>
+            <div class="resume-item-inner">
+            <p class="year">2023 - Present</p>
+            <p class="company"><i>XYZ Technologies</i></p>
+            <p class="details">Developed and maintained dynamic websites and applications using React, Node.js, and MongoDB. Collaborated with a cross-functional team to create high-quality solutions based on client requirements. Integrated third-party services and APIs to enhance application features.</p>
+            <p class="details">Developed and maintained dynamic websites and applications using React, Node.js, and MongoDB. Collaborated with a cross-functional team to create high-quality solutions based on client requirements. Integrated third-party services and APIs to enhance application features.</p>
+            </div>
+          </div>
+
+          <div class="resume-item">
+            <div class="job-position">JUNIOR WEB DEVELOPER</div>
+            <div class="resume-item-inner">
+            <p class="year">2021 - 2023</p>
+            <p class="company"><i>ABC Web Solutions</i></p>
+            <p class="details">Assisted in developing user interfaces with HTML, CSS, and JavaScript. Worked on back-end development using Node.js and MySQL to build scalable and secure applications. Participated in code reviews and collaborated in team sprints for project delivery.</p>
+            <p class="details">Developed and maintained dynamic websites and applications using React, Node.js, and MongoDB. Collaborated with a cross-functional team to create high-quality solutions based on client requirements. Integrated third-party services and APIs to enhance application features.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- Portfolio Section -->
+
+    <section class="portfolio-section" id="portfolio">
+      <div class="container">
+        <div class="portfolio-heading">
+          <h2 class="section-title">Portfolio</h2>
+        </div>
+        <p class="text-center">A passionate web developer with expertise in building responsive and interactive websites. Skilled in front-end and back-end technologies, with a strong foundation in JavaScript, React, Node.js, and databases like MongoDB and MySQL.</p>
+
+  
+        <div class="portfolio-container">
+          <!-- Portfolio Item 1 -->
+          <div class="portfolio-item">
+            <img src="images/1.jpg" alt="Portfolio Image 1">
+            <div class="portfolio-details">
+              <h3>Project Title 1</h3>
+              <p>technologies, or scope.</p>
+            </div>
+          </div>
+  
+          <!-- Portfolio Item 2 -->
+          <div class="portfolio-item">
+            <img src="images/2.jpg" alt="Portfolio Image 2">
+            <div class="portfolio-details">
+              <h3>Project Title 2</h3>
+              <p>Description of the project goes here. It could include details about the tools, technologies, or scope.</p>
+            </div>
+          </div>
+  
+          <!-- Portfolio Item 3 -->
+          <div class="portfolio-item">
+            <img src="images/3.jpg" alt="Portfolio Image 3">
+            <div class="portfolio-details">
+              <h3>Project Title 3</h3>
+              <p>Description of the project goes here. It could include details about the tools, technologies, or scope.</p>
+            </div>
+          </div>
+  
+          <!-- Add more portfolio items as needed -->
+        </div>
+      </div>
+    </section>
+  
+   <!-- Service Section -->
+   <section class="service-section" id="services">
+    <div class="container">
+      <!-- Service Heading -->
+      <div class="service-heading">
+        <h2 class="section-title">Services</h2>
+      </div>
+      <p class="text-center">A passionate web developer with expertise in building responsive and interactive websites. Skilled in front-end and back-end technologies, with a strong foundation in JavaScript, React, Node.js, and databases like MongoDB and MySQL.</p>
+
+      <!-- Service Grid -->
+      <div class="row">
+        <!-- Service Item 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="service-card text-center">
+            <i class="fa fa-cogs"></i>
+            <h5>Custom Development</h5>
+            <p>We create custom web solutions tailored to your business needs.</p>
+          </div>
+        </div>
+
+        <!-- Service Item 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="service-card text-center">
+            <i class="fa fa-code"></i>
+            <h5>Web Design & Development</h5>
+            <p>We design and develop responsive and user-friendly websites.</p>
+          </div>
+        </div>
+
+        <!-- Service Item 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="service-card text-center">
+            <i class="fa fa-search"></i>
+            <h5>SEO Optimization</h5>
+            <p>We help improve your website's visibility with effective SEO strategies.</p>
+          </div>
+        </div>
+
+        <!-- Service Item 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="service-card text-center">
+            <i class="fa fa-bullhorn"></i>
+            <h5>Digital Marketing</h5>
+            <p>Grow your business with our tailored digital marketing strategies.</p>
+          </div>
+        </div>
+
+        <!-- Service Item 5 -->
+        <div class="col-md-4 mb-4">
+          <div class="service-card text-center">
+            <i class="fa fa-support"></i>
+            <h5>Customer Support</h5>
+            <p>We offer round-the-clock support to ensure the best customer experience.</p>
+          </div>
+        </div>
+
+        <!-- Service Item 6 -->
+        <div class="col-md-4 mb-4">
+          <div class="service-card text-center">
+            <i class="fa fa-cloud"></i>
+            <h5>Cloud Solutions</h5>
+            <p>We provide cloud-based solutions to scale your business effectively.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="testimonial-section">
+    <div class="container">
+      <div class="testimonial-heading">
+        <h2>What Our Clients Say</h2>
+      </div>
+
+      <div class="testimonial-carousel">
+        <!-- Testimonial Item 1 -->
+        <div class="testimonial-item active">
+          <p class="testimonial-quote">"This service has changed the way we operate our business. The results are incredible!"</p>
+          <p class="testimonial-author">John Doe <span class="designation">CEO, Company X</span></p>
+        </div>
+
+        <!-- Testimonial Item 2 -->
+        <div class="testimonial-item">
+          <p class="testimonial-quote">"I can't thank them enough for their hard work and dedication. Truly a game-changer!"</p>
+          <p class="testimonial-author">Jane Smith <span class="designation">Marketing Director, Company Y</span></p>
+        </div>
+
+        <!-- Testimonial Item 3 -->
+        <div class="testimonial-item">
+          <p class="testimonial-quote">"Absolutely top-notch. Their team knows what they're doing and helped us grow exponentially!"</p>
+          <p class="testimonial-author">Emily Johnson <span class="designation">CTO, Company Z</span></p>
+        </div>
+
+        <!-- Testimonial Item 4 -->
+        <div class="testimonial-item">
+          <p class="testimonial-quote">"A truly exceptional experience. They exceeded our expectations on every level."</p>
+          <p class="testimonial-author">Michael Brown <span class="designation">Founder, Company A</span></p>
+        </div>
+        
+        <!-- Radio Button Navigation -->
+        <div class="testimonial-radio-nav">
+          <input type="radio" name="testimonial" id="testimonial1" checked>
+          <input type="radio" name="testimonial" id="testimonial2">
+          <input type="radio" name="testimonial" id="testimonial3">
+          <input type="radio" name="testimonial" id="testimonial4">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <!-- Contact Us Heading -->
+      <div class="contact-heading">
+        <h2 class="setion-title">Contact Us</h2>
+      </div>
+
+      <p class="text-center">I'm a web developer with a passion for creating dynamic, user-friendly websites and applications. With years of experience in front-end and back-end technologies, I strive to deliver high-quality solutions.</p>
+
+      <div class="row">
+        <!-- Left Column with Contact Info -->
+        <div class="col-md-6">
+          <div class="contact-info">
+            <div class="contact-column">
+              <i class="fa fa-map-marker"></i>
+              <strong>Address:</strong> <span>1234 Main St, Springfield, IL</span>
+            </div>
+            <div class="contact-column">
+              <i class="fa fa-phone"></i>
+              <strong>Phone:</strong> <span>(555) 123-4567</span>
+            </div>
+            <div class="contact-column">
+              <i class="fa fa-envelope"></i>
+              <strong>Email:</strong> <span>info@example.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column (for example, Contact Form) -->
+        <div class="col-md-6">
+          <!-- Contact Form -->
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                <div class="error" id="nameError"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                <div class="error" id="emailError"></div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+              <div class="error" id="subjectError"></div>
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+              <div class="error" id="messageError"></div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+
+<footer>
+  <p>&copy; 2025 IFEDUBA AMARACHI. All rights reserved.</p>
+  <p>
+    <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+      <i class="fa fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/your-profile" target="_blank">
+      <i class="fa fa-github"></i>
+    </a>
+    <a href="https://twitter.com/your-profile" target="_blank">
+      <i class="fa fa-twitter"></i>
+    </a>
+    <a href="https://www.facebook.com/your-profile" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </p>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTopBtn" class="btn btn-primary" title="Go to top">
+  <i class="fa fa-arrow-up"></i> <!-- Bootstrap icon for the up arrow -->
+</button>
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/home.js"></script>
+
+</body>
+</html>
