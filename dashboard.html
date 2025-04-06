@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,209 +7,293 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="author" content="Amarachi Vincent">
-<link href="css/custom.css" rel="stylesheet">
-<link href="fonts/css/font-awesome.css" rel="stylesheet">
-
+<link href="static/css/custom.css" rel="stylesheet">
+<link href="static/fonts/css/font-awesome.css" rel="stylesheet">
 <title>Admin panel</title>
+<style>
+
+.frame{
+height:100vh;
+}
+.d-menu{
+height:100vh;
+}
+.t-menu a{
+text-decoration:none;
+color:white;
+}
+
+
+.content-t-item p:nth-child(2), .content-t-item span{
+font-size:1.6em;
+}
+
+.content-m-item section .warning{
+color:orange
+}
+</style>
 </head>
 <body>
 
 <div class="frame">
     <div class="t-menu">
-    <p><span class="menu"><i class="fa fa-list"></i></span><strong>FULLSTACK DEV</strong></p><p>Logout</p>
+    <p><span class="menu"><i class="fa fa-list"></i></span><strong>Admin Dashboard</strong></p><p><a href="#">logout</a></p>
     </div>
     <div class="d-menu">  
-     <nav>
-      <ul>
-        <li  class="brand"><span></span><span>Ifeduba Amarachi</span></li>
-      </ul>
-      <ul>
-        <li class="site"><span class="fa fa-globe"></span><span><a href="#">Visit Site</a></span></li>
-      </ul>
-      <ul>
-        <li><span class="fa fa-user"></span><span><a href="#">Admin Panel</a></span></li> 
-      </ul>
-      <ul>
-        <li><span class="fa fa-group"></span><span><a href="#">Categories</a></span></li>
-        
-      </ul>
-      <ul>
-        <li><span class="fa fa-lock"></span><span><a href="#">Users</a></span></li> 
-      </ul>
-      <ul>
-        <li>
-                <span class="fa fa-warning"></span>
-                <span><a href="">App Settings </a></span>
-            <span><a href="#"><i  id="caret" class="fa fa-caret-right"></i></a></span>
-
-        </li>
-        <li class="sub-menu">
-          <ul>
-            <li><span></span><span>Background</span></li>
-            <li><span></span><span>Font</span></li>
-            <li><span></span><span>Width</span></li>
-          </ul>
-        </li>
-        
-      </ul>
-      <ul>
-        <li><span class="fa fa-info"></span><span><a href="#">Members</a></span></li> 
-      </ul>  
+      <nav>
         <ul>
-        <li><span class="fa fa-group"></span><span><a href="#">Categories</a></span></li>
-        
-      </ul>
-      <ul>
-        <li><span class="fa fa-lock"></span><span><a href="#">Users</a></span></li> 
-      </ul>
-      <ul>
-        <li><span class="fa fa-warning"></span><span><a href="#">App Settings</a></span></li>
-        
-      </ul>
-      <ul>
-        <li><span class="fa fa-info"></span><span><a href="#">Members</a></span></li> 
-      </ul>  
-      </nav>
+          <li  class="brand"><span><i class="fa fa-user"></i></span><span><a href="#">super</a></span></li>
+        </ul>
+        <ul>
+          <li><span class="fa fa-briefcase"></span><span><a href="#">
+             Plan
+      </a></span></li>
+          
+        </ul>
+        <ul>
+          <li class="site"><span class="fa fa-globe"></span><span><a href="#">Visit Site</a></span></li> 
+        </ul>
+        <ul>
+          <li><span class="fa fa-book"></span><span><a href="#">User Guide</a></span></li> 
+        </ul>
+        <ul>
+          <li><span class="fa fa-info"></span><span><a href="#">Analysis Options</a></span></li>
+          
+        </ul>
+        <ul>
+          <li><span class="fa fa-upload"></span><span><a href="#">Upload History</a></span></li> 
+        </ul>
+        <ul>
+          <li>
+                  <span class="fa fa-warning"></span>
+                  <span><a href="">App Settings </a></span>
+              <span><a href="#"><i  id="caret" class="fa fa-caret-right"></i></a></span>
+  
+          </li>
+          <li class="sub-menu">
+            <ul>
+              <li><span></span><span class="theme"><a href="#">Theme</a></span></li>
+              <li><span></span><span><a href="#">Font Size</a></span></li>
+              <li><span></span><span><a href="#">Font Family</a></span></li>
+            </ul>
+          </li>
+          
+        </ul>
+  
+        <ul>
+          <li><span>&nbsp;</span><span><a href="#">Logout</a></span></li> 
+        </ul>  
+        </nav>
     </div>
 <div class="dashboard" >  
  <div class="d-content">
-  <div class="d-content-t">
-    <div class="content-t-item">
-      <div>
-        <p class="b-purple"><i class="fa fa-home label"></i></p>
-        <p>Category</p>
-      </div>
-      <div>
-      <p>Total: <span> 2.0</span></p>
-      </div>
-
-     </div>
-     <div class="content-t-item">
+    <div class="d-content-t">
+       <div class="content-t-item">
          <div>
-           <p class="b-blue"><i class="fa fa-group label"></i></p>
-           <p>Users</p>
+           <p class="b-purple"><i class="fa fa-home label"></i></p>
+           <p>Category</p>
          </div>
          <div>
-         <p>Total: <span>2.0</span></p>
-
+         <p>Total: <span> 2.0</span></p>
          </div>
 
         </div>
         <div class="content-t-item">
-         <div>
-           <p class="b-green"><i class="fa fa-user label"></i></p>
-           <p>Amount</p>
-         </div>
-         <div>
-         <p>Total (NGN)<span> 0.0</span></p>
+            <div>
+              <p class="b-blue"><i class="fa fa-group label"></i></p>
+              <p>Users</p>
+            </div>
+            <div>
+            <p>Total: <span>5.0</span></p>
 
-         </div>
+            </div>
+   
+           </div>
+           <div class="content-t-item">
+            <div>
+              <p class="b-green"><i class="fa fa-user label"></i></p>
+              <p>Amount</p>
+            </div>
+            <div>
+            <p>Total (NGN)<span> 0.0</span></p>
 
-        </div>
-         <div class="content-t-item">
-         <div>
-           <p class="b-orange"><i class="fa fa-envelope label"></i></p>
-           <p>Info</p>
-         </div>
-         <div>
-         <p>T test will be implemented  soon<span></span></p>
-         <p><span></span></p>
-         </div>
-
-        </div>
- </div>
+            </div>
+   
+           </div>
+            <div class="content-t-item">
+            <div>
+              <p class="b-orange"><i class="fa fa-envelope label"></i></p>
+              <p>Info</p>
+            </div>
+            <div>
+            <p>T test will be implemented  soon<span></span></p>
+            <p><span></span></p>
+            </div>
+   
+           </div>
+    </div>
     <div class="d-content-m">
-      <div class="content-m-item">
-        <section>
-          <div><span><h2>Category</h2></span><span><a href="#">New</a><a href="#">View All</a></span></div>
-          <hr>
-          <table>
-            <tr><th>ID</th><th>Name</th></th><th>Free</th><th>Paid</th></tr>
-            
-            <tr>
-              <td>1</td>
-              <td>super</td>
-              <td>1</td>
-              <td>0</td>
-            </tr>
-            
-            <tr>
-              <td>3</td>
-              <td>amarachi</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-            
-    
-          </table>
-        </section>
-      </div>
-      <div class="content-m-item">
-        <section>
-          
-          
-        
-          <div><span><h2>Users</h2></span><span><a href="#">New</a><a href="#">View All</a></span></div>
-          <hr>
-          <table>
-          <tr><th>ID</th><th>Name</th></th><th>Action</th></tr>
+    <div class="content-m-item">
+      <section>
+        <div><span><h2>Category</h2></span><span><a href="#">New</a><a href="#">View All</a></span></div>
+        <hr>
+        <table>
+          <tr><th>ID</th><th>Name</th></th><th>Free</th><th>Paid</th></tr>
           
           <tr>
             <td>1</td>
             <td>super</td>
-            <td>
-            <a href="#"><i class='fa fa-edit text-blue'></a></i>
-            <a href="#"><i class='fa fa-remove text-red'></a></i>
-            </td>
+            <td>1</td>
+            <td>0</td>
+          </tr>
+          
+          <tr>
+            <td>2</td>
+            <td>amarachi</td>
+            <td>0</td>
+            <td>0</td>
           </tr>
           
           <tr>
             <td>3</td>
-            <td>amarachi</td>
-            <td>
-            <a href="#"><i class='fa fa-edit text-blue'></a></i>
-            <a href="#"><i class='fa fa-remove text-red'></a></i>
-            </td>
+            <td>okoro</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          <tr>
+            <td>5</td>
+            <td>busy</td>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+          
+          <tr>
+            <td>6</td>
+            <td>bright</td>
+            <td>1</td>
+            <td>0</td>
           </tr>
           
   
-  
-          </table>
-        </section>
-      </div>
-  
-      <div class="content-m-item">
-        <section>
-          <div><span><h2>Amounts</h2></span><span><a href="#">New</a><a href="#">View All</a></span></div>
-          <hr>
-          <table>
-            <tr><th>ID</th><th>Name</th></th><th>Amount (NGN)</th></tr>
-         
-            
-            <tr>
-              <td>1</td>
-              <td>super</td>
-              <td>0</td>
-              </tr>
-  
-            
-            <tr>
-              <td>3</td>
-              <td>amarachi</td>
-              <td>0</td>
-              </tr>
-  
-            
-    
-          </table>
-        </section>
-      </div>
+        </table>
+      </section>
+    </div>
+    <div class="content-m-item">
+      <section>
+        
+        
       
-      <div class="content-m-item">
-       <section>
+        <div><span><h2>Users</h2></span><span><a href="#">New</a><a href="#">View All</a></span></div>
+        <hr>
+        <table>
+        <tr><th>ID</th><th>Name</th></th><th>Action</th></tr>
+        
+        <tr>
+          <td>1</td>
+          <td>super</td>
+          <td>
+          <a href="#"><i class='fa fa-edit text-blue'></a></i>
+          <a href="#"><i class='fa fa-remove text-red'></a></i>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>2</td>
+          <td>amarachi</td>
+          <td>
+          <a href="#"><i class='fa fa-edit text-blue'></a></i>
+          <a href="#"><i class='fa fa-remove text-red'></a></i>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>3</td>
+          <td>okoro</td>
+          <td>
+          <a href="#"><i class='fa fa-edit text-blue'></a></i>
+          <a href="#"><i class='fa fa-remove text-red'></a></i>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>5</td>
+          <td>busy</td>
+          <td>
+          <a href="#"><i class='fa fa-edit text-blue'></a></i>
+          <a href="#"><i class='fa fa-remove text-red'></a></i>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>6</td>
+          <td>bright</td>
+          <td>
+          <a href="#"><i class='fa fa-edit text-blue'></a></i>
+          <a href="#"><i class='fa fa-remove text-red'></a></i>
+          </td>
+        </tr>
+        
+
+
+        </table>
+      </section>
+    </div>
+
+    <div class="content-m-item">
+      <section>
+        <div><span><h2>Amounts</h2></span><span><a href="#">New</a><a href="#">View All</a></span></div>
+        <hr>
+        <table>
+          <tr><th>ID</th><th>Name</th></th><th>Amount (NGN)</th></tr>
+       
+          
+          <tr>
+            <td>1</td>
+            <td>super</td>
+            <td>0</td>
+            </tr>
+
+          
+          <tr>
+            <td>2</td>
+            <td>amarachi</td>
+            <td>0</td>
+            </tr>
+
+          
+          <tr>
+            <td>3</td>
+            <td>okoro</td>
+            <td>0</td>
+            </tr>
+
+          
+          <tr>
+            <td>5</td>
+            <td>busy</td>
+            <td>0</td>
+            </tr>
+
+          
+          <tr>
+            <td>6</td>
+            <td>bright</td>
+            <td>0</td>
+            </tr>
+
+          
   
-       </section>
-      </div>
+        </table>
+      </section>
+    </div>
+    
+    <div class="content-m-item">
+     <section>
+
+     </section>
+    </div>
+
     </div>
 </div>
 </div>
@@ -218,6 +303,7 @@
         <p>Copyright &copy;2025: All right reserved;</p><p>Developed by fullstack dev</p>
     </div>
 </div>
-<script src="js/main.js"></script>
+<script src="static/js/main.js"></script>
+
 </body>
 </html>
